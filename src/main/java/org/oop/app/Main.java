@@ -23,6 +23,7 @@ public class Main {
         catalogProduse.add(new PlatformaManagementProiecte(9,"Jira", 200.00,"2.0",5));
         catalogProduse.add(new MediuDeDezvoltare(10,"Intellij", 100.00,"15.0","Java"));
         catalogProduse.add(new BazadeDate(11,"MYSQL", 0.00,"3.0","SQL"));
+        catalogProduse.add(new SistemServer(12,"HPE ProLiant", 25000.0, "DL380 Gen11", 2));
         // (x) Apelarea celei de-a doua metode de parcurgere (cu 'switch')
         System.out.println("\n--- Testare polimorfism cu 'switch' (Java 21+): ---");
         parcurgePolimorficMachingCaseListaProduse(catalogProduse);
@@ -42,6 +43,7 @@ public class Main {
                 case SistemEnterprise s -> System.out.println("  -> SistemEnterprise: " + s.getVersiune() + " - Licență: " + s.getTipLicenta());
                 case MediuDeDezvoltare s -> System.out.println("  -> MediuDeDezvoltare: " + s.getVersiune() + " - Limbaj: " + s.getLimbajProgramare());
                 case BazadeDate s -> System.out.println("  -> SistemBazeDeDate: " + s.getVersiune() + " - Tip BD: " + s.getTipBD());
+                case SistemServer s -> System.out.println("  -> SistemServer: " + s.getNumarModel() + " - Procesoare: " + s.getNrProcesoare());
                 case null -> System.out.println("Produs invalid (null).");
                 default -> System.out.println("Tip de produs necunoscut: " + p.getClass().getName());
             }
