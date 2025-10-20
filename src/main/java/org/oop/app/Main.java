@@ -19,6 +19,9 @@ public class Main {
         catalogProduse.add(new SistemMobil(5, "NB Lenovo", 4100.0, "IdeaPad", 16.0)); // Folosim 16.0 pentru Double
         catalogProduse.add(new SistemMobil(6, "iPhone", 6500.0, "11X", 6.0));      // Folosim 6.0 pentru Double
         catalogProduse.add(new SistemEnterprise(7,"SAP", 500.00,"2.0","Community"));
+        catalogProduse.add(new ClientEmail(8,"client@.ro", 0.00,"2.0",1));
+        catalogProduse.add(new PlatformaManagementProiecte(9,"Jira", 200.00,"2.0",5));
+        catalogProduse.add(new MediuDeDezvoltare(10,"Intellij", 100.00,"15.0","Java"));
         // (x) Apelarea celei de-a doua metode de parcurgere (cu 'switch')
         System.out.println("\n--- Testare polimorfism cu 'switch' (Java 21+): ---");
         parcurgePolimorficMachingCaseListaProduse(catalogProduse);
