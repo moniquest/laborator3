@@ -9,6 +9,8 @@ public class SistemEnterprise extends Software {
         this.TipLicenta = TipLicenta;
     }
 
+    public SistemEnterprise() {super();}
+
     public String getTipLicenta() {
         return TipLicenta;
     }

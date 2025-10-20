@@ -22,6 +22,7 @@ public class Main {
         catalogProduse.add(new ClientEmail(8,"client@.ro", 0.00,"2.0",1));
         catalogProduse.add(new PlatformaManagementProiecte(9,"Jira", 200.00,"2.0",5));
         catalogProduse.add(new MediuDeDezvoltare(10,"Intellij", 100.00,"15.0","Java"));
+        catalogProduse.add(new BazadeDate(11,"MYSQL", 0.00,"3.0","SQL"));
         // (x) Apelarea celei de-a doua metode de parcurgere (cu 'switch')
         System.out.println("\n--- Testare polimorfism cu 'switch' (Java 21+): ---");
         parcurgePolimorficMachingCaseListaProduse(catalogProduse);
@@ -36,6 +37,11 @@ public class Main {
                 case SuitaOffice s -> System.out.println("  -> Tip: SuitaOffice | Versiune: " + s.getVersiune() + " | OS Suportat: " + s.getTipSistemOperare());
                 case SistemDesktop s -> System.out.println("  -> Tip: SistemDesktop | Model: " + s.getNumarModel() + " | Arhitectură: " + s.getTipArhitectura());
                 case SistemMobil s -> System.out.println("  -> Tip: SistemMobil | Model: " + s.getNumarModel() + " | Memorie: " + s.getCapacitateMemorie() + "GB");
+                case ClientEmail s -> System.out.println("  -> ClientEmail: " + s.getVersiune() + " - Conturi: " + s.getNumarConturiMax());
+                case PlatformaManagementProiecte s -> System.out.println("  -> PlatformaManagementProiecte: " + s.getVersiune() + " - Numar Maxim Proiectee: " + s.getNumarProiecteMax());
+                case SistemEnterprise s -> System.out.println("  -> SistemEnterprise: " + s.getVersiune() + " - Licență: " + s.getTipLicenta());
+                case MediuDeDezvoltare s -> System.out.println("  -> MediuDeDezvoltare: " + s.getVersiune() + " - Limbaj: " + s.getLimbajProgramare());
+                case BazadeDate s -> System.out.println("  -> SistemBazeDeDate: " + s.getVersiune() + " - Tip BD: " + s.getTipBD());
                 case null -> System.out.println("Produs invalid (null).");
                 default -> System.out.println("Tip de produs necunoscut: " + p.getClass().getName());
             }
