@@ -27,6 +27,7 @@ public class Main {
         catalogProduse.add(new Smartphone(13,"Iphone", 2500.0, "17 Pro", 256.0));
         catalogProduse.add(new Tablet(14,"Ipad", 2500.0, "Air", 256.0));
         catalogProduse.add(new Notebook(15,"Lenovo", 250.0, "Slim", 6.0));
+        catalogProduse.add(new Laptop(16,"Acer", 250.0, "Nitro", 16.0));
         // (x) Apelarea celei de-a doua metode de parcurgere (cu 'switch')
         System.out.println("\n--- Testare polimorfism cu 'switch' (Java 21+): ---");
         parcurgePolimorficMachingCaseListaProduse(catalogProduse);
@@ -50,6 +51,7 @@ public class Main {
                 case Smartphone s -> System.out.println("  -> SmartPhone: " + s.getNumarModel() + " - Memorie: " + s.getCapMemorie() + "\"");
                 case Tablet s -> System.out.println("  -> Tablet: " + s.getNumarModel() + " - Memorie: " + s.getCapMemorie() + "\"");
                 case Notebook s -> System.out.println("  -> Notebook: " + s.getNumarModel() + " - Memorie: " + s.getRAM() + "\"");
+                case Laptop s -> System.out.println("  -> Notebook: " + s.getNumarModel() + " - Memorie: " + s.getRAM() + "\"");
                 case null -> System.out.println("Produs invalid (null).");
                 default -> System.out.println("Tip de produs necunoscut: " + p.getClass().getName());
             }
